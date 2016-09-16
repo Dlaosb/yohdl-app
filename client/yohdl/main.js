@@ -127,7 +127,7 @@ if (navigator.getUserMedia) {
   }
 
   var onError = function(err) {
-    console.log('The following error occured: ' + err);
+    console.log('The following error occured: ', err);
   }
 
   navigator.getUserMedia(constraints, onSuccess, onError);

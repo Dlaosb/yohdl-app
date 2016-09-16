@@ -130,12 +130,11 @@ io.on('connection', function (socket) {
   console.log('connected')
   socket.on('clip', () => {
     console.log('inclip listener')
-    // console.log('curClip in ')
     setTimeout(() => {
-      socket.emit('newClip', curClip);
+      socket.broadcast.emit('newClip', curClip);
     }, 5000);
+  });
 
-   });
     // console.log(cookie.parse(socket.handshake.headers['cookie']));
     //id = req.params.id
     //user object contrl.getuser()
@@ -144,8 +143,5 @@ io.on('connection', function (socket) {
     // userController.getUser().then((data) => { socket.emit('userObj', data); });
   }
 )
-// io.on('clip', () => {
-//   console.log('in clip')
-// })
 
 server.listen(8080);

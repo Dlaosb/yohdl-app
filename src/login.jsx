@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FacebookLogin from 'react-facebook-login';
 import $ from 'jquery';
-
+import FacebookButton from './FacebookButton.jsx';
 import { browserHistory } from 'react-router';
 
 class Login extends Component {
@@ -10,6 +10,7 @@ class Login extends Component {
     this.state = {};
     this.sendCreds = this.sendCreds.bind(this);
   }
+
   sendCreds(e) {
     e.preventDefault();
     let newState = {
@@ -36,6 +37,7 @@ class Login extends Component {
     });
   }
   render() {
+    console.log("THIS IS FB", FB);
     return (
       <div id="login-form">
         <div id="error-message">{this.state.error}</div>
@@ -46,6 +48,7 @@ class Login extends Component {
             <button type="submit">submit</button>
           </form>
           <br></br>
+          <FacebookButton fb={FB} />
       </div>
     );
   }
