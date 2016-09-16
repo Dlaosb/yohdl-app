@@ -4,12 +4,18 @@ import { Router, Route, Link } from 'react-router';
 class Rooms extends Component {
   render() {
     return (
-      <div>
+      <div className="right padding-right">
         <h1>Rooms</h1>
         <Link to="/yohdl/room/1111">Room 1111</Link>
         <Link to="/yohdl/room/2222">Room 2222</Link>
         <Link to="/yohdl/room/3333">Room 3333</Link>
         <Link to="/yohdl/room/4444">Room 4444</Link>
+<<<<<<< HEAD
+=======
+        <Link to="/yohdl/room/5555">Room 5555</Link>
+        <Link to="/yohdl/room/6666">Room 6666</Link>
+        <Link to="/yohdl/room/7777">Room 7777</Link>
+>>>>>>> 8e658eb63c4d5f67996ccbc59092a4496687a5a3
       </div>
     )
   }
